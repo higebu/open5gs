@@ -4,8 +4,8 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import Header from 'containers/Header';
-import Sidebar from 'containers/Sidebar';
+import Header from '@/containers/Header';
+import Sidebar from '@/containers/Sidebar';
 
 import Package from '../../../package';
 

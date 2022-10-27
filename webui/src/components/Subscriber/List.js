@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media, transitions } from 'helpers/style-utils';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import { media, transitions } from '@/helpers/style-utils';
+import { CSSTransition } from 'react-transition-group';
 
-import { Layout, Blank } from 'components';
+import { Layout, Blank } from '@/components';
 import Item from './Item';
 
 const Wrapper = styled.div`
@@ -57,12 +57,12 @@ const List = ({ subscribers, deletedImsi, onView, onEdit, onDelete, search }) =>
 
   return (
     <Wrapper>
-      <CSSTransitionGroup
+      <CSSTransition
         transitionName="subscriber"
         transitionEnterTimeout={300}
         transitionLeaveTimeout={150}>
         {subscriberList}
-      </CSSTransitionGroup>
+      </CSSTransition>
     </Wrapper>
   )
 }

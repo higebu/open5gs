@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 
-import withWidth, { SMALL } from 'helpers/with-width';
-import * as sidebarActions from 'modules/sidebar';
+import withWidth, { SMALL } from '@/helpers/with-width';
+import * as sidebarActions from '@/modules/sidebar';
 
-import { Sidebar } from 'components';
+import { Sidebar } from '@/components';
 
 class SidebarContainer extends Component {
   static propTypes = {

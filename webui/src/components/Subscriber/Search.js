@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media } from 'helpers/style-utils';
+import { media } from '@/helpers/style-utils';
 
-import SearchIcon from 'react-icons/lib/md/search';
-import ClearIcon from 'react-icons/lib/md/clear';
+import { MdSearch } from 'react-icons/md';
+import { MdClear } from 'react-icons/md';
 
 const Wrapper = styled.div`
   display: flex;
@@ -61,13 +61,13 @@ const ClearIconWrapper = styled.div`
 
 const Search = ({ value, onChange, onClear }) => (
   <Wrapper>
-    <SearchIconWrapper><SearchIcon/></SearchIconWrapper>
+    <SearchIconWrapper><MdSearch/></SearchIconWrapper>
     <Input 
       value={value}
       onChange={onChange}/>
     {value !== '' && 
       <ClearIconWrapper onClick={onClear}>
-        <ClearIcon/>
+        <MdClear/>
       </ClearIconWrapper>
     }
   </Wrapper>

@@ -4,12 +4,12 @@ import { connect } from 'react-redux';
 
 import NProgress from 'nprogress';
 
-import { MODEL, fetchAccounts, fetchAccount, createAccount, updateAccount } from 'modules/crud/account';
-import { clearActionStatus } from 'modules/crud/actions';
-import { select, selectActionStatus } from 'modules/crud/selectors';
-import * as Notification from 'modules/notification/actions';
+import { MODEL, fetchAccounts, fetchAccount, createAccount, updateAccount } from '@/modules/crud/account';
+import { clearActionStatus } from '@/modules/crud/actions';
+import { select, selectActionStatus } from '@/modules/crud/selectors';
+import * as Notification from '@/modules/notification/actions';
 
-import { Account } from 'components';
+import { Account } from '@/components';
 
 import traverse from 'traverse';
 import crypto from 'crypto';

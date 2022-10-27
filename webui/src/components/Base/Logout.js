@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import { Modal } from 'components';
-import { media, transitions } from 'helpers/style-utils';
-
-import PersonIcon from 'react-icons/lib/md/person';
+import { Modal } from '@/components';
+import { media, transitions } from '@/helpers/style-utils';
 
 const Wrapper = styled.div`
   width: 300px;

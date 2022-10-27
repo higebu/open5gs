@@ -2,10 +2,10 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { MODEL, fetchAccounts, deleteAccount } from 'modules/crud/account';
-import { clearActionStatus } from 'modules/crud/actions';
-import { select, selectActionStatus } from 'modules/crud/selectors';
-import * as Notification from 'modules/notification/actions';
+import { MODEL, fetchAccounts, deleteAccount } from '@/modules/crud/account';
+import { clearActionStatus } from '@/modules/crud/actions';
+import { select, selectActionStatus } from '@/modules/crud/selectors';
+import * as Notification from '@/modules/notification/actions';
 
 import { 
   Layout, 
@@ -15,7 +15,7 @@ import {
   Blank,
   Dimmed,
   Confirm
-} from 'components';
+} from '@/components';
 
 import Document from './Document';
 

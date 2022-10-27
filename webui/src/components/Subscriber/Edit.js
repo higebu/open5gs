@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import withWidth, { SMALL } from 'helpers/with-width';
-import { Form } from 'components';
+import withWidth, { SMALL } from '@/helpers/with-width';
+import { Form } from '@/components';
 
 import traverse from 'traverse';
 

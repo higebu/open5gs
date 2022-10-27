@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media } from 'helpers/style-utils';
+import { media } from '@/helpers/style-utils';
 
 import JsonSchemaForm from 'react-jsonschema-form';
 

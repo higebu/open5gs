@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import onClickOutside from 'react-onclickoutside';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import { media, transitions } from 'helpers/style-utils';
+import { CSSTransition } from 'react-transition-group';
+import { transitions } from '@/helpers/style-utils';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -85,14 +85,14 @@ class Modal extends Component {
         zindex={zindex}
         transitionEnter={transitionEnter} 
         transitionLeave={transitionLeave}>
-        <CSSTransitionGroup
+        <CSSTransition
           transitionName="modal"
           transitionEnterTimeout={transitionEnterTimeout}
           transitionLeaveTimeout={transitionLeaveTimeout}>
           {
             visible && (<div>{children}</div>)
           }
-        </CSSTransitionGroup>
+        </CSSTransition>
       </Wrapper>
     );
   }

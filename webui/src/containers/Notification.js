@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import NotificationSystem from 'react-notification-system';
 
-import * as actions from 'modules/notification/actions';
+import * as actions from '@/modules/notification/actions';
 
 class Notification extends Component {
 

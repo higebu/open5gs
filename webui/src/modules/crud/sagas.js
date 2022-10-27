@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { all, takeEvery, put, call, take, fork } from 'redux-saga/effects';
 import { CRUD } from './actions';
-import Session from 'modules/auth/session';
+import Session from '@/modules/auth/session';
 
 const crudApi = (method, url, csrf, authToken, { params, data } = {} ) => {
   let headers = { 'X-CSRF-TOKEN': csrf }

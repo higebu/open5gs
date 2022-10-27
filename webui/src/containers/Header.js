@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as sidebarActions from 'modules/sidebar';
+import * as sidebarActions from '@/modules/sidebar';
 
-import Session from 'modules/auth/session';
-import { Header, Logout, Dimmed } from 'components';
+import Session from '@/modules/auth/session';
+import { Header, Logout, Dimmed } from '@/components';
 
 class HeaderContainer extends Component {
   state = {

@@ -5,8 +5,8 @@ import { bindActionCreators } from 'redux';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 
-import Session from 'modules/auth/session';
-import { Login } from 'components';
+import Session from '@/modules/auth/session';
+import { Login } from '@/components';
 
 class Auth extends Component {
   state = {

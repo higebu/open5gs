@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators, compose } from 'redux';
 
-import * as sidebarActions from 'modules/sidebar';
-import withWidth, { SMALL } from 'helpers/with-width';
+import * as sidebarActions from '../modules/sidebar';
+import withWidth, { SMALL } from '../helpers/with-width';
 
-import { Layout } from 'components';
-import Notification from 'containers/Notification';
-import * as Subscriber from 'containers/Subscriber';
-import * as Profile from 'containers/Profile';
-import * as Account from 'containers/Account';
+import { Layout } from '../components';
+import Notification from '../containers/Notification';
+import * as Subscriber from '../containers/Subscriber';
+import * as Profile from '../containers/Profile';
+import * as Account from '../containers/Account';
 
 class App extends Component {
   static propTypes = {

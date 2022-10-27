@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import { media, transitions } from 'helpers/style-utils';
+import { media, transitions } from '@/helpers/style-utils';
 
 import Modal from './Modal';
 import Button from './Button';

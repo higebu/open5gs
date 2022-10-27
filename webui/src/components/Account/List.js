@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media } from 'helpers/style-utils';
+import { media } from '@/helpers/style-utils';
 
-import { Layout, Blank } from 'components';
+import { Layout, Blank } from '@/components';
 import Item from './Item';
 
 const Wrapper = styled.div`

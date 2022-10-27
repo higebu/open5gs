@@ -2,19 +2,19 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media } from 'helpers/style-utils';
+import { media } from '@/helpers/style-utils';
 
-import EditIcon from 'react-icons/lib/md/edit';
-import DeleteIcon from 'react-icons/lib/md/delete';
-import CloseIcon from 'react-icons/lib/md/close';
+import { MdEdit } from 'react-icons/md';
+import { MdDelete } from 'react-icons/md';
+import { MdClose } from 'react-icons/md';
 
-import PhoneIcon from 'react-icons/lib/md/phone';
-import SecurityIcon from 'react-icons/lib/md/security';
-import MmeIcon from 'react-icons/lib/md/router';
-import PdnIcon from 'react-icons/lib/md/cast';
-import KeyboardControlIcon from 'react-icons/lib/md/keyboard-control';
+import { MdPhone } from 'react-icons/md';
+import { MdSecurity } from 'react-icons/md';
+import { MdRouter } from 'react-icons/md';
+import { MdCast } from 'react-icons/md';
+import { MdKeyboardArrowUp } from 'react-icons/md';
 
-import { Modal, Tooltip, Dimmed } from 'components';
+import { Modal, Tooltip, Dimmed } from '@/components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -188,13 +188,13 @@ const View = ({ visible, disableOnClickOutside, subscriber, onEdit, onDelete, on
             <div className="title">{imsi}</div>
             <div className="actions">
               <Tooltip content='Edit' width="60px">
-                <CircleButton onClick={() => onEdit(imsi)}><EditIcon/></CircleButton>
+                <CircleButton onClick={() => onEdit(imsi)}><MdEdit/></CircleButton>
               </Tooltip>
               <Tooltip content='Delete' width="60px">
-                <CircleButton className="delete" onClick={() => onDelete(imsi)}><DeleteIcon/></CircleButton>
+                <CircleButton className="delete" onClick={() => onDelete(imsi)}><MdDelete/></CircleButton>
               </Tooltip>
               <Tooltip content='Close' width="60px">
-                <CircleButton className="delete" onClick={onHide}><CloseIcon/></CircleButton>
+                <CircleButton className="delete" onClick={onHide}><MdClose/></CircleButton>
               </Tooltip>
             </div>
           </Header>
@@ -208,19 +208,19 @@ const View = ({ visible, disableOnClickOutside, subscriber, onEdit, onDelete, on
                   {(msisdn_list.length !== 0 || (imeisv && imeisv.length !== 0)) &&
                     <div className="body">
                       <div className="left">
-                        <PhoneIcon/>
+                        <MdPhone/>
                       </div>
                       <div className="right">
                         {msisdn_list.map((msisdn, index) =>
                           <div key={index} className="data">
                             {msisdn}
-                            <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>MSISDN</span>
+                            <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>MSISDN</span>
                           </div>
                         )}
                         {imeisv && imeisv.length !== 0 &&
                           <div className="data">
                             {imeisv}
-                            <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>IMEISV</span>
+                            <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>IMEISV</span>
                           </div>
                         }
                       </div>
@@ -228,33 +228,33 @@ const View = ({ visible, disableOnClickOutside, subscriber, onEdit, onDelete, on
                   }
                   <div className="body">
                     <div className="left">
-                      <SecurityIcon/>
+                      <MdSecurity/>
                     </div>
                     <div className="right">
                       <div className="data">
                         {security.k}
-                        <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>K</span>
+                        <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>K</span>
                       </div>
                       {security.opc &&
                         <div className="data">
                           {security.opc}
-                          <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>OPc</span>
+                          <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>OPc</span>
                         </div>
                       }
                       {security.op &&
                         <div className="data">
                           {security.op}
-                          <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>OP</span>
+                          <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>OP</span>
                         </div>
                       }
                       <div className="data">
                         {security.amf}
-                        <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>AMF</span>
+                        <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>AMF</span>
                       </div>
                       {security.sqn &&
                         <div className="data">
                           {security.sqn}
-                          <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>SQN</span>
+                          <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>SQN</span>
                         </div>
                       }
                     </div>
@@ -264,29 +264,29 @@ const View = ({ visible, disableOnClickOutside, subscriber, onEdit, onDelete, on
                   {mme_host && mme_host.length !== 0 &&
                     <div className="body">
                       <div className="left">
-                        <MmeIcon/>
+                        <MdRouter/>
                       </div>
                       <div className="right">
                         <div className="data">
                           {mme_host}
-                          <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>MME Hostname</span>
+                          <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>MME Hostname</span>
                         </div>
                         {mme_realm &&
                           <div className="data">
                             {mme_realm}
-                            <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>MME Realm</span>
+                            <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>MME Realm</span>
                           </div>
                         }
                         <div className="data">
                           {purge_flag === true ? ( "Purged" ) : ( "Not Purged" )}
-                          <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>UE is Purged at MME</span>
+                          <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>UE is Purged at MME</span>
                         </div>
                       </div>
                     </div>
                   }
                   <div className="body">
                     <div className="left">
-                      <PdnIcon/>
+                      <MdCast/>
                     </div>
                     <div className="right">
                       <div className="data">
@@ -302,7 +302,7 @@ const View = ({ visible, disableOnClickOutside, subscriber, onEdit, onDelete, on
                                 ambr.downlink.unit === 3 ? "Gbps" :
                                 ambr.downlink.unit === 4 ? "Tbps" :
                                   "Unknown Unit" }
-                        <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>DL</span>
+                        <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>DL</span>
                       </div>
                       <div className="data">
                         {ambr['uplink'] === undefined ? "unlimited" :
@@ -317,7 +317,7 @@ const View = ({ visible, disableOnClickOutside, subscriber, onEdit, onDelete, on
                                 ambr.uplink.unit === 3 ? "Gbps" :
                                 ambr.uplink.unit === 4 ? "Tbps" :
                                   "Unknown Unit" }
-                        <span style={{color:oc.gray[5]}}><KeyboardControlIcon/>UL</span>
+                        <span style={{color:oc.gray[5]}}><MdKeyboardArrowUp/>UL</span>
                       </div>
                     </div>
                   </div>

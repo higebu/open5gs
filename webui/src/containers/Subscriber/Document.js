@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 
 import NProgress from 'nprogress';
 
-import { MODEL, fetchSubscribers, fetchSubscriber, createSubscriber, updateSubscriber } from 'modules/crud/subscriber';
-import { fetchProfiles } from 'modules/crud/profile';
-import { clearActionStatus } from 'modules/crud/actions';
-import { select, selectActionStatus } from 'modules/crud/selectors';
-import * as Notification from 'modules/notification/actions';
+import { MODEL, fetchSubscribers, fetchSubscriber, createSubscriber, updateSubscriber } from '@/modules/crud/subscriber';
+import { fetchProfiles } from '@/modules/crud/profile';
+import { clearActionStatus } from '@/modules/crud/actions';
+import { select, selectActionStatus } from '@/modules/crud/selectors';
+import * as Notification from '@/modules/notification/actions';
 
-import { Subscriber } from 'components';
+import { Subscriber } from '@/components';
 
 import traverse from 'traverse';
 

@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 import oc from 'open-color';
-import { media  } from 'helpers/style-utils';
 
-import EditIcon from 'react-icons/lib/md/edit';
-import DeleteIcon from 'react-icons/lib/md/delete';
+import { MdDelete } from 'react-icons/md';
 
-import { Tooltip, Spinner } from 'components';
+import { Tooltip, Spinner } from '@/components';
 
 const Card = styled.div`
   position: relative;
@@ -166,7 +164,7 @@ class Item extends Component {
         {session.user.username !== account.username &&
           <div className="actions">
             <Tooltip content='Delete' width="60px">
-              <CircleButton className="delete" onClick={handleDelete}><DeleteIcon/></CircleButton>
+              <CircleButton className="delete" onClick={handleDelete}><MdDelete/></CircleButton>
             </Tooltip>
           </div>}
         {spinner && <SpinnerWrapper><Spinner sm/></SpinnerWrapper>}

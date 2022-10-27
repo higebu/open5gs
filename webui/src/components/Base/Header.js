@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import { CircleIcon, Tooltip } from 'components';
-import MenuIcon from 'react-icons/lib/md/menu';
-import PersonIcon from 'react-icons/lib/md/person';
+import { CircleIcon, Tooltip } from '@/components';
+import { MdMenu } from 'react-icons/md';
+import { MdPerson } from 'react-icons/md';
 
 const Wrapper = styled.div`
   display: flex;
